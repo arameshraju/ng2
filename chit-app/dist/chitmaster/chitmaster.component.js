@@ -7,20 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var chitmaster_component_1 = require("./chitmaster/chitmaster.component");
-var AppModule = (function () {
-    function AppModule() {
+var ChitMasterComponent = (function () {
+    function ChitMasterComponent() {
+        this.yourname = 'Ramesh';
     }
-    return AppModule;
+    return ChitMasterComponent;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, chitmaster_component_1.ChitMasterComponent],
-        bootstrap: [app_component_1.AppComponent, chitmaster_component_1.ChitMasterComponent]
+ChitMasterComponent = __decorate([
+    core_1.Component({
+        selector: 'chit-master',
+        templateUrl: "../dist/views/chitmaster.html"
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], ChitMasterComponent);
+exports.ChitMasterComponent = ChitMasterComponent;
+//# sourceMappingURL=chitmaster.component.js.map
