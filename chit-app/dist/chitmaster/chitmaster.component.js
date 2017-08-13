@@ -7,17 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var chitmaster_1 = require("./chitmaster");
 var ChitMasterComponent = (function () {
     function ChitMasterComponent() {
         this.yourname = 'Ramesh';
+        this.cm = new chitmaster_1.ChitMaster('10L 20 Chits', 1000000, 25, 40000, 'SMC', 'TEST');
     }
+    ChitMasterComponent = __decorate([
+        core_1.Component({
+            selector: 'chit-master',
+            templateUrl: "../dist/views/chitmaster.html"
+        })
+    ], ChitMasterComponent);
     return ChitMasterComponent;
 }());
-ChitMasterComponent = __decorate([
-    core_1.Component({
-        selector: 'chit-master',
-        templateUrl: "../dist/views/chitmaster.html"
-    })
-], ChitMasterComponent);
 exports.ChitMasterComponent = ChitMasterComponent;
 //# sourceMappingURL=chitmaster.component.js.map

@@ -1,3 +1,39 @@
-<h1>chit Master</h1>
-<h2>chit detail</h2>
-<h3>chit transactions</h3>
+<div class="container">
+    <h1>Chit Master</h1>
+    <form #ChitMaster="ngForm">
+      <div class="form-group">
+        <label for="chitname">Chit Name {{cm.chitname}} </label>
+        <input type="text" class="form-control" id="chitname" required  [(ngModel)]="cm.chitname" name="chitname"
+       #chitname="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitvalue">Chit Value</label>
+        <input type="number" class="form-control" id="chitvalue" required [(ngModel)]="cm.chitvalue" name="chitvalue"
+       #chitvalue="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitmonths">No of Months</label>
+        <input type="number" class="form-control" id="chitmonths" required [(ngModel)]="cm.chitmonths" name="chitmonths"
+       #chitmonths="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitsubscription">Subscription </label>
+        <input type="number" class="form-control" id="chitsubscription" required [(ngModel)]="cm.chitsubscription" name="chitsubscription"
+       #chitsubscription="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitfundname">Chit fund Name </label>
+        <input type="text" class="form-control" id="chitfundname" required [(ngModel)]="cm.chitfundname" name="chitfundname"
+       #chitfundname="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitnote">Note</label>
+        <input type="text" class="form-control" id="chitnote" required [(ngModel)]="cm.chitnote" name="chitnote"
+       #chitnote="ngModel">
+      </div>
+{{cm|json}}
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>
