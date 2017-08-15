@@ -1,6 +1,6 @@
 <div class="container">
-    <h1>Chit Master</h1>
-    <form #ChitMaster="ngForm">
+    <h1>Chit Master {{issubmitted}}</h1>
+    <form (ngSubmit)="onSubmit()" #ChitMaster="ngForm">
       <div class="form-group">
         <label for="chitname">Chit Name {{cm.chitname}} </label>
         <input type="text" class="form-control" id="chitname" required  [(ngModel)]="cm.chitname" name="chitname"
@@ -13,7 +13,7 @@
       </div>
       <div class="form-group">
         <label for="chitmonths">No of Months</label>
-        <input type="number" class="form-control" id="chitmonths" required [(ngModel)]="cm.chitmonths" name="chitmonths"
+        <input type="number" class="form-control" id="chitmonths" required [(ngModel)]="cm.chitmonths"  name="chitmonths"
        #chitmonths="ngModel">
       </div>
       <div class="form-group">

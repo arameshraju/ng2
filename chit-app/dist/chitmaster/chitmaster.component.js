@@ -11,8 +11,12 @@ var chitmaster_1 = require("./chitmaster");
 var ChitMasterComponent = (function () {
     function ChitMasterComponent() {
         this.yourname = 'Ramesh';
-        this.cm = new chitmaster_1.ChitMaster('10L 20 Chits', 1000000, 25, 40000, 'SMC', 'TEST');
+        this.issubmitted = 'false';
+        this.cm = new chitmaster_1.ChitMaster();
     }
+    ChitMasterComponent.prototype.onSubmit = function () {
+        this.issubmitted = 'true';
+    };
     ChitMasterComponent = __decorate([
         core_1.Component({
             selector: 'chit-master',

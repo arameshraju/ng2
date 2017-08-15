@@ -1,14 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ChitMaster = (function () {
-    function ChitMaster(chitname, chitvalue, chitmonths, chitsubscription, chitfundname, chitnote) {
-        this.chitname = chitname;
-        this.chitvalue = chitvalue;
-        this.chitmonths = chitmonths;
-        this.chitsubscription = chitsubscription;
-        this.chitfundname = chitfundname;
-        this.chitnote = chitnote;
+    function ChitMaster() {
+        this.chitname = '';
+        this.chitvalue = 0;
+        this.chitmonths = 0;
+        this.chitsubscription = 0;
+        this.chitnote = '';
+        this.chitfundname = 'SCF';
     }
+    ChitMaster.prototype.getSubscription = function () {
+        if (this.chitvalue > 0 && this.chitvalue > 0) {
+            return this.chitvalue / this.chitmonths;
+        }
+        else {
+            return 0;
+        }
+    };
     return ChitMaster;
 }());
 exports.ChitMaster = ChitMaster;
