@@ -4,10 +4,12 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { ChitMasterComponent }  from './chitmaster/chitmaster.component';
+import { ChitTransComponent }  from './transaction/chittrans.component';
+
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule ],
-  declarations: [ AppComponent,ChitMasterComponent ],
-  bootstrap:    [ AppComponent,ChitMasterComponent ]
+  declarations: [ AppComponent,ChitMasterComponent,ChitTransComponent ],
+  bootstrap:    [ AppComponent,ChitMasterComponent,ChitTransComponent ]
 })
 export class AppModule { }

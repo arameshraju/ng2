@@ -14,7 +14,8 @@ export class ChitMasterComponent {
 
     onSubmit() {
         this.issubmitted='true';
-        console.log()
+        console.log(this.cm);
       }
+
 
 }
