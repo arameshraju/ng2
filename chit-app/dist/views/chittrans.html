@@ -1,3 +1,61 @@
 <div class="container">
     <h1>Chit Transactions</h1>
+    <form (ngSubmit)="onSubmit()" #ChitMaster="ngForm">
+      <div class="form-group">
+        <label for="chitname">Chit Trans type </label>
+        <input type="text" class="form-control" id="transtype" required  [(ngModel)]="ct.transtype" name="transtype"
+       #transtype="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Chit Trans Date </label>
+        <input type="text" class="form-control" id="transdate" required  [(ngModel)]="ct.transdate" name="transdate"
+       #transtype="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Chit Name </label>
+        <input type="text" class="form-control" id="transchitname" required  [(ngModel)]="ct.transchitname" name="transchitname"
+       #transchitname="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="chitname">Subscription Amount</label>
+        <input type="text" class="form-control" id="transdate" required  [(ngModel)]="ct.subscription" name="subscription"
+       #subscription="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Subscription Bonus</label>
+        <input type="text" class="form-control" id="transbonus" required  [(ngModel)]="ct.transbonus" name="transbonus"
+       #transbonus="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="chitname">Chit Amount Paid</label>
+        <input type="text" class="form-control" id="amountpaid" required  [(ngModel)]="ct.amountpaid" name="amountpaid"
+       #amountpaid="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Chit Trans Payment Mode </label>
+        <input type="text" class="form-control" id="transdate" required  [(ngModel)]="ct.transpaymode" name="transpaymode"
+       #transpaymode="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Chit Trans Note </label>
+        <input type="text" class="form-control" id="transnote" required  [(ngModel)]="ct.transnote" name="transnote"
+       #transnote="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="chitname">Chit Amount Receipt </label>
+        <input type="text" class="form-control" id="chitReceipt" required  [(ngModel)]="ct.chitReceipt" name="chitReceipt"
+       #chitReceipt="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="chitname">Chit Receipt Note </label>
+        <input type="text" class="form-control" id="chitReceipt" required  [(ngModel)]="ct.chitReceipt" name="chitReceipt"
+       #chitReceipt="ngModel">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+    {{ct |json}}
 </div>

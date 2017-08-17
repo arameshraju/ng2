@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var ChitTransComponent = (function () {
     function ChitTransComponent() {
         this.name = "ramesh";
+        this.ct = {};
     }
     ChitTransComponent = __decorate([
         core_1.Component({

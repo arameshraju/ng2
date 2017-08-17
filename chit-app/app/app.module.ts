@@ -10,6 +10,6 @@ import { ChitTransComponent }  from './transaction/chittrans.component';
 @NgModule({
   imports:      [ BrowserModule,FormsModule ],
   declarations: [ AppComponent,ChitMasterComponent,ChitTransComponent ],
-  bootstrap:    [ AppComponent,ChitMasterComponent,ChitTransComponent ]
+  bootstrap:    [ AppComponent,ChitTransComponent ]
 })
 export class AppModule { }

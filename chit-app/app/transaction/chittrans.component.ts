@@ -6,4 +6,5 @@ templateUrl :  "../dist/views/chittrans.html"
 })
 export class ChitTransComponent{
     name="ramesh";
+   ct={};
 }
