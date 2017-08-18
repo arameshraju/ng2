@@ -14,7 +14,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Hello {{yourname}},</h1> <p>Welcome to your first angular2 application </p> <p>Thank you <br/>Angular 4.3.3</p>"
+            templateUrl: "../dist/views/app.html"
         })
     ], AppComponent);
     return AppComponent;

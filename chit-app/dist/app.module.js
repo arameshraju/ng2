@@ -9,17 +9,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var chitmaster_component_1 = require("./chitmaster/chitmaster.component");
 var chittrans_component_1 = require("./transaction/chittrans.component");
+var appRoutes = [
+    { path: 'chitmaster', component: chitmaster_component_1.ChitMasterComponent },
+    { path: 'chittrans', component: chittrans_component_1.ChitTransComponent },
+    { path: '',
+        redirectTo: '/chitmaster',
+        pathMatch: 'full'
+    }
+];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            imports: [
+                platform_browser_1.BrowserModule, forms_1.FormsModule, router_1.RouterModule.forRoot(appRoutes, { enableTracing: true })
+            ],
             declarations: [app_component_1.AppComponent, chitmaster_component_1.ChitMasterComponent, chittrans_component_1.ChitTransComponent],
-            bootstrap: [app_component_1.AppComponent, chittrans_component_1.ChitTransComponent]
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;
