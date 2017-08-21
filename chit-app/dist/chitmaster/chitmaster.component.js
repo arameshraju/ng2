@@ -12,7 +12,12 @@ var ChitMasterComponent = (function () {
     function ChitMasterComponent() {
         this.yourname = 'Ramesh';
         this.issubmitted = 'false';
-        this.cm = new chitmaster_1.ChitMaster();
+        this.cm = new chitmaster_1.ChitMaster('', 0, 0, 0, '', '');
+        this.cms = [
+            { chitname: 'cn1', chitvalue: 10, chitmonths: 1, chitsubscription: 10, chitfundname: '', chitnote: '' },
+            { chitname: 'cn2', chitvalue: 20, chitmonths: 2, chitsubscription: 10, chitfundname: '', chitnote: '' },
+            { chitname: 'cn3', chitvalue: 30, chitmonths: 3, chitsubscription: 10, chitfundname: '', chitnote: '' }
+        ];
     }
     ChitMasterComponent.prototype.onSubmit = function () {
         this.issubmitted = 'true';

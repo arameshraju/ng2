@@ -5,20 +5,15 @@ export class ChitMaster {
     chitsubscription:number;
     chitfundname:String;
     chitnote: String;
-    constructor() {
-        this.chitname = '';
-        this.chitvalue = 0;
-        this.chitmonths = 0;
-        this.chitsubscription = 0;
-        this.chitnote = '';
-        this.chitfundname = 'SCF';
+    constructor(n:String,v:number,m:number,s:number,nt:String,cf:String ) {
+        this.chitname = n;
+        this.chitvalue = v;
+        this.chitmonths = m;
+        this.chitsubscription = s;
+        this.chitnote = nt;
+        this.chitfundname = cf;
     }
-    getSubscription(){
-      if(this.chitvalue>0 &&   this.chitvalue>0){
-          return this.chitvalue /this.chitmonths;
-      }else{
-      return 0;
-      }
-    }
+
+    
 
 }
